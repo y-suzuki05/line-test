@@ -6,7 +6,6 @@ const Confirmation = () => {
   const liffRef = useRef<Liff | null>(null);
   const [accessToken, setAccessToken] = useState<string>("");
   const liffId = process.env.LIFF_ID;
-  // alert(liffId)
 
   const initLiff = useCallback(async () => {
     try {
@@ -29,7 +28,9 @@ const Confirmation = () => {
   }, [liffId]);
 
   const getAccessToken = () => {
+    alert(liffId);
     const accessToken = liffRef.current?.getAccessToken();
+    alert(accessToken);
     accessToken && setAccessToken(accessToken);
   };
 
