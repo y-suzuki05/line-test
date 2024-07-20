@@ -34,6 +34,10 @@ const Confirmation = () => {
     accessToken && setAccessToken(accessToken);
   };
 
+  const logout = () => {
+    liffRef.current?.logout()
+  }
+
   useEffect(() => {
     initLiff();
   }, [initLiff]);
@@ -41,6 +45,7 @@ const Confirmation = () => {
   return (
     <Box>
       <Text>LINE連携しますか？</Text>
+      <Button onClick={() => logout()}>ログアウト</Button>
       <Button onClick={() => getAccessToken()}>許可する</Button>
       <Box>アクセストークン：{accessToken}</Box>
     </Box>

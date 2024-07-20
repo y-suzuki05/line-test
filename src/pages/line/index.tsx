@@ -19,6 +19,8 @@ const Line = () => {
           external: true,
         });
       }
+
+      if (liff.isLoggedIn()) return;
     } catch (error) {
       console.error("LIFFの初期化に失敗", error);
     }
