@@ -5,7 +5,7 @@ import { Liff } from "@line/liff";
 const Confirmation = () => {
   const liffRef = useRef<Liff | null>(null);
   const [accessToken, setAccessToken] = useState<string>("");
-  const liffId = process.env.LIFF_ID;
+  const liffId = process.env.NEXT_PUBLIC_LIFF_ID;
 
   const initLiff = useCallback(async () => {
     try {

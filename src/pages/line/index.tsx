@@ -2,7 +2,7 @@ import { useEffect, useCallback, useRef } from "react";
 import { Box } from "@chakra-ui/react";
 
 const Line = () => {
-  const liffId = process.env.LIFF_ID;
+  const liffId = process.env.NEXT_PUBLIC_LIFF_ID;
 
   const initLiff = useCallback(async () => {
     try {
