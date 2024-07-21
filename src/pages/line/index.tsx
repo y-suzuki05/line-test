@@ -1,4 +1,4 @@
-import { useEffect, useCallback, useRef } from "react";
+import { useEffect, useCallback } from "react";
 import { Box } from "@chakra-ui/react";
 
 const Line = () => {

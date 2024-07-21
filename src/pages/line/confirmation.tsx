@@ -14,7 +14,7 @@ const Confirmation = () => {
 
       if (liffId) {
         await liff.init({ liffId });
-        alert(liff.isLoggedIn());
+        alert(`LINEログイン状態: ${liff.isLoggedIn()}`);
       }
 
       if (!liff.isLoggedIn()) {
@@ -30,14 +30,13 @@ const Confirmation = () => {
   }, [liffId]);
 
   const getAccessToken = () => {
-    alert(liffId);
     const accessToken = liffRef.current?.getAccessToken();
-    alert(accessToken);
     accessToken && setAccessToken(accessToken);
   };
 
   const logout = () => {
     liffRef.current?.logout();
+    alert(`LINEログイン状態: ${liffRef.current?.isLoggedIn()}`);
   };
 
   useEffect(() => {
