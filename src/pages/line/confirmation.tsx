@@ -18,9 +18,7 @@ const Confirmation = () => {
       }
 
       if (!liff.isLoggedIn()) {
-        liff.login({
-          redirectUri: "https://line-test-six.vercel.app/line/confirmation",
-        });
+        liff.login();
       }
 
       liffRef.current = liff;
